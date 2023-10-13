@@ -9,7 +9,7 @@ import (
 
 func Start() {
 	router := mux.NewRouter()
-	router.HandleFunc("/api/time", getTime).Methods("GET")
+	router.HandleFunc("/api/time", GetTime).Methods("GET")
 
 	log.Fatal(http.ListenAndServe(":8080", router))
 }

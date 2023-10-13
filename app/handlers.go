@@ -10,7 +10,7 @@ type TimeDTO struct {
 	CurrentTime time.Time `json:"current_time"`
 }
 
-func getTime(w http.ResponseWriter, r *http.Request) {
+func GetTime(w http.ResponseWriter, r *http.Request) {
 	var now time.Time
 	query := r.URL.Query()
 	loc := query.Get("tz")
